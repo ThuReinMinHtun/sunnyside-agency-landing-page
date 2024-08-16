@@ -17,7 +17,7 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: 16px;
         text-align: center;
       }
       .attribution a {
@@ -25,7 +25,24 @@
       }
     </style>
   </head>
-  <body>
+  <body class="font-barlow w-full max-h-screen">
+    <header
+      class="w-full h-screen bg-[url('/images/mobile/image-header.jpg')] md:bg-[url('/images/desktop/image-header.jpg')] bg-cover bg-center text-white font-normal"
+    >
+      <nav class="w-full flex justify-between items-center px-8 py-8">
+        <img src="./images/logo.svg" alt="logo photo" />
+        <ul class="hidden md:flex items-center gap-8">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <button
+            class="bg-white text-black uppercase font-fraunces font-bold px-5 py-3 text-sm rounded-full hover:bg-[#6FCFFF] hover:text-white shadow-sm transition duration-100 ease-in"
+          >
+            Contact
+          </button>
+        </ul>
+      </nav>
+    </header>
     <!-- About Services Projects Contact We are creatives Transform your brand We are
     a full-service creative agency specializing in helping brands grow fast.
     Engage your clients through compelling visuals that do most of the marketing
