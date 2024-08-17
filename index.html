@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | Sunnyside agency landing page</title>
     <link rel="stylesheet" href="./src/css/output.css" />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -23,18 +24,70 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      
     </style>
   </head>
   <body class="font-barlow w-full max-h-screen">
     <header
       class="w-full h-screen bg-[url('/images/mobile/image-header.jpg')] md:bg-[url('/images/desktop/image-header.jpg')] bg-cover bg-center text-white font-normal"
     >
-      <nav class="w-full flex justify-between items-center px-8 py-8">
+      <nav
+        class="w-full flex justify-between items-center text-lg font-medium px-8 py-8"
+      >
         <img src="./images/logo.svg" alt="logo photo" />
+        <a
+          href=""
+          class="md:hidden hover:animate-bounce hover:scale-125 transition-transform duration-300 ease-in-out"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10 hamburger-icon "
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="line top animate-moveFromRight-1"
+              d="M5 7h14"
+            />
+            <path
+              fill="none"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="line middle animate-moveFromRight-2"
+              d="M5 12h14"
+            />
+            <path
+              fill="none"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="line bottom animate-moveFromRight-3"
+              d="M5 17h14"
+            />
+          </svg>
+        </a>
         <ul class="hidden md:flex items-center gap-8">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
+          <li
+            class="hover:bg-gradient-to-r from-white via-gray-start to-gray-end hover:bg-clip-text hover:text-transparent hover:scale-110 transition-transform duration-300"
+          >
+            <a href="#" class="">About</a>
+          </li>
+          <li
+            class="hover:bg-gradient-to-r from-white via-gray-start to-gray-end hover:bg-clip-text hover:text-transparent hover:scale-110 transition-transform duration-300"
+          >
+            <a href="#">Services</a>
+          </li>
+          <li
+            class="hover:bg-gradient-to-r from-white via-gray-start to-gray-end hover:bg-clip-text hover:text-transparent hover:scale-110 transition-transform duration-300"
+          >
+            <a href="#">Projects</a>
+          </li>
           <button
             class="bg-white text-black uppercase font-fraunces font-bold px-5 py-3 text-sm rounded-full hover:bg-[#6FCFFF] hover:text-white shadow-sm transition duration-100 ease-in"
           >
