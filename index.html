@@ -24,23 +24,31 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      
+      .custom-box::before {
+        content: '';
+        position: absolute;
+        top: -16px;
+        right: 0;
+        border-left: 16px solid transparent;
+        border-bottom: 16px solid white;
+      }
     </style>
   </head>
   <body class="font-barlow w-full max-h-screen">
     <header
-      class="w-full h-screen bg-[url('/images/mobile/image-header.jpg')] md:bg-[url('/images/desktop/image-header.jpg')] bg-cover bg-center text-white font-normal"
+      class="w-full h-screen bg-[url('/images/mobile/image-header.jpg')] md:bg-[url('/images/desktop/image-header.jpg')] bg-cover bg-center text-white font-normal relative"
     >
       <nav
-        class="w-full flex justify-between items-center text-lg font-medium px-8 py-8"
+        class="w-full flex justify-between items-center text-lg font-medium px-8 py-8 "
       >
         <img src="./images/logo.svg" alt="logo photo" />
         <a
-          href=""
-          class="md:hidden hover:animate-bounce hover:scale-125 transition-transform duration-300 ease-in-out"
+          id="menu-toggle"
+          href="#"
+          class="md:hidden hover:animate-bounce hover:scale-125 transition-transform duration-300 ease-in-out cursor-pointer"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-10 h-10 hamburger-icon "
+            class="w-10 h-10 hamburger-icon"
             viewBox="0 0 24 24"
           >
             <path
@@ -95,6 +103,26 @@
           </button>
         </ul>
       </nav>
+      <div
+        id="menu"
+        class="hidden md:hidden absolute top-[29%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(100%-10%)] h-[200px] bg-white shadow-lg  custom-box "
+      >
+        <ul></ul>
+      </div>
+      <div
+        class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center flex-col items-center gap-10"
+      >
+        <h1
+          class="text-center w-1/2 md:w-full text-4xl font-fraunces font-bold uppercase flex justify-center mx-auto p-3 tracking-widest mb-6"
+        >
+          We are creatives
+        </h1>
+        <img
+          src="./images/icon-arrow-down.svg"
+          alt="icon-arrow-down"
+          class="flex items-center justify-center mb-6"
+        />
+      </div>
     </header>
     <!-- About Services Projects Contact We are creatives Transform your brand We are
     a full-service creative agency specializing in helping brands grow fast.
@@ -120,5 +148,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Thu Rein</a>.
     </div>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
