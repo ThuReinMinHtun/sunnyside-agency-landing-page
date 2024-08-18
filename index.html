@@ -25,9 +25,10 @@
         color: hsl(228, 45%, 44%);
       }
       .custom-box::before {
-        content: '';
+        content: "";
         position: absolute;
-        top: -16px;
+
+        top: -15px;
         right: 0;
         border-left: 16px solid transparent;
         border-bottom: 16px solid white;
@@ -35,11 +36,13 @@
     </style>
   </head>
   <body class="font-barlow w-full max-h-screen">
+    <!-- header--start -->
     <header
       class="w-full h-screen bg-[url('/images/mobile/image-header.jpg')] md:bg-[url('/images/desktop/image-header.jpg')] bg-cover bg-center text-white font-normal relative"
     >
+      <!-- navbar start -->
       <nav
-        class="w-full flex justify-between items-center text-lg font-medium px-8 py-8 "
+        class="w-full flex justify-between items-center text-lg font-medium px-8 py-8"
       >
         <img src="./images/logo.svg" alt="logo photo" />
         <a
@@ -105,10 +108,40 @@
       </nav>
       <div
         id="menu"
-        class="hidden md:hidden absolute top-[29%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(100%-10%)] h-[200px] bg-white shadow-lg  custom-box "
+        class="hidden md:hidden absolute top-[29%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(90%-10%)] bg-white shadow-lg gap-4 custom-box z-50 p-4"
       >
-        <ul></ul>
+        <ul class="flex flex-col items-center gap-4 p-4">
+          <li>
+            <a
+              href="#"
+              class="text-darkgrayishblue text-center text-xl font-semibold hover:text-black transition duration-200 ease-in-out"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-darkgrayishblue text-center text-xl font-semibold hover:text-black transition duration-200 ease-in-out"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-darkgrayishblue text-center text-xl font-semibold hover:text-black transition duration-200 ease-in-out"
+              >Projects</a
+            >
+          </li>
+          <button
+            class="bg-yellow text-black uppercase font-fraunces font-bold px-5 py-3 text-md rounded-full hover:bg-darkgrayishblue hover:text-white shadow-sm transition duration-200 ease-in"
+          >
+            Contact
+          </button>
+        </ul>
       </div>
+      <!-- navbar--end -->
+      <!-- ------------------------------------------------------------------ -->
+      <!-- title-part-start -->
       <div
         class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center flex-col items-center gap-10"
       >
@@ -123,7 +156,11 @@
           class="flex items-center justify-center mb-6"
         />
       </div>
+      <!-- title-part-end -->
     </header>
+    <!-- end of header  -->
+
+    <!-- =================================================================== -->
     <!-- About Services Projects Contact We are creatives Transform your brand We are
     a full-service creative agency specializing in helping brands grow fast.
     Engage your clients through compelling visuals that do most of the marketing
